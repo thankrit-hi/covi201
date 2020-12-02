@@ -39,6 +39,13 @@ fun Application.module(testing: Boolean = false) {
             call.respond(covild)
         }
 
+        get(path = "/api/krit/popkrit"){
+            val popkrit = KKrit(
+                name = "krit",
+                age =  21)
+            call.respond(popkrit)
+        }
+
     }
 
 }
@@ -59,3 +66,9 @@ data class Covid(
 
 
     )
+
+data class KKrit(
+    val name: String? = null,
+    val age: Int? = null,
+
+)
